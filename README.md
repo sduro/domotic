@@ -12,5 +12,8 @@ Instalación WSGI
 ----------------
 sudo apt-get install libapache2-mod-wsgi
 
-Uso
+
+#opciones
+##Más opciones
+`dentro del cuadro resalta mas`
 ...
