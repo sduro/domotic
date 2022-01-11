@@ -1,7 +1,7 @@
 {
     "configuration": {
-        "govee_api":"c64dcd4a-0a5b-4153-8798-177e606f34e2",
-        "govee_bulb_mac":"df:db:7c:a6:b0:11:47:ab"
+        "govee_api":"c64dcd4a-0a5b-4153-8798-xxxxxxxxxxx",
+        "govee_bulb_mac":"df:db:xx:xx:xx:xx:xx:xx"
     }
     
 }
