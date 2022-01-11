@@ -9,12 +9,12 @@ from requests.structures import CaseInsensitiveDict
 from bottle import run, get, post, request, template, route,static_file,redirect, view # or route
 
 with open("config.json", "r") as jsonfile:
-    data = json.load(jsonfile) # Reading the file
+    datajson = json.load(jsonfile) # Reading the file
     jsonfile.close()
 
 def config():
     with open("config.json", "w") as jsonfile:
-        json.dump(data,jsonfile,ensure_ascii=False) # writing the file
+        json.dump(datajson,jsonfile,ensure_ascii=False) # writing the file
         jsonfile.close()
 
 @route("/static/css/<filename>")
@@ -35,7 +35,7 @@ def control():
 
     headers = CaseInsensitiveDict()
     #headers["Govee-API-Key"] = "c64dcd4a-0a5b-4153-8798-177e606f34e2"
-    headers["Govee-API-Key"] = data['configuration']['govee_api']
+    headers["Govee-API-Key"] = datajson['configuration']['govee_api']
     #headers["Request Method"] = "PUT"
     headers["Content-Type"] = "application/json"
 
@@ -53,7 +53,7 @@ def bright():
 
     headers = CaseInsensitiveDict()
     #headers["Govee-API-Key"] = "c64dcd4a-0a5b-4153-8798-177e606f34e2"
-    headers["Govee-API-Key"] = data['configuration']['govee_api']
+    headers["Govee-API-Key"] = datajson['configuration']['govee_api']
     #headers["Request Method"] = "PUT"
     headers["Content-Type"] = "application/json"
 
