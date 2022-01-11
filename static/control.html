@@ -61,23 +61,29 @@
 
       <div class="starter-template">
         <p class="lead">
-          <a class="btn btn-primary btn-lg btn-block" href="/control?option=on&bright=50">On 50%</a></br>
-          <a class="btn btn-primary btn-lg btn-block" href="/control?option=on&bright=100">On 100%</a></br>
-          <a class="btn btn-primary btn-lg btn-block" href="/control?option=off&bright=0">Off</a>
-          
+          <table class="table table-bordered">
+            <tbody>
+              <tr>
+              <th><a class="btn btn-primary btn-lg btn-block" href="/control?option=on&bright=50">On 50%</a></br></th>
+              <th><a class="btn btn-primary btn-lg btn-block" href="/control?option=on&bright=100">On 100%</a></br></th>
+              <th><a class="btn btn-danger btn-lg btn-block" href="/control?option=off&bright=0">Off</a></th>
+              </tr>
+          </tbody>
+          </table>
+
         </h2>
       </div>
       
-      <label for="customRange2" class="form-label">Brightness</label>
+      <label for="bright" class="form-label">Brightness</label>
       <input type="range" class="form-range" min="0" max="100" step="1" id="customRange2">
-      <a class="btn btn-primary btn-lg btn-block" href="/control?option=on&bright="&customRange2.value >Brightness</a></br>
+      <a class="btn btn-primary btn-lg btn-block" href="/control?option=on&bright="&bright >Brightness</a></br>
 
       <form>
         <div class="form-group">
-          <label for="formControlRange">Example Range input</label>
-          <input type="range" class="form-control-range" min="0" max="100" id="formControlRange" onInput="$('#rangeval').html($(this).val())">
-          <span id="rangeval" valuen="rangeval">50<!-- Default value --></span>
-          <a class="btn btn-primary btn-lg btn-block" href="/bright" type="submit">Brightness</a></br>
+          <label for="bright">Example Range input</label>
+          <input type="range" class="form-control-range" min="0" max="100" id="bright" onInput="$('#bright').html($(this).val())">
+          <span id="bright" valuen="bright">50<!-- Default value --></span>
+          <a class="btn btn-primary btn-lg btn-block" href="/control?option=on&bright="&bright type="submit">Brightness</a></br>
         </div>
       </form>
 

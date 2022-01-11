@@ -29,17 +29,15 @@ def control():
 def control():
     option = request.params.get('option')
     print (option)
-    bright = int(request.params.get('customRange2'))
+    bright = int(request.params.get('bright'))
     print (bright)
     url = "https://developer-api.govee.com/v1/devices/control"
 
     headers = CaseInsensitiveDict()
-    #headers["Govee-API-Key"] = "c64dcd4a-0a5b-4153-8798-177e606f34e2"
     headers["Govee-API-Key"] = datajson['configuration']['govee_api']
-    #headers["Request Method"] = "PUT"
     headers["Content-Type"] = "application/json"
-
-    data = '{"device":"df:db:7c:a6:b0:11:47:ab","model":"H6003","cmd":{"name":"turn","value":"' +option+'","name":"brightness","value":'+str(bright)+'}}'
+    mac=datajson['configuratio']['govee_bulb_mac']
+    data = '{"device":"' +mac+'","model":"H6003","cmd":{"name":"turn","value":"' +option+'","name":"brightness","value":'+str(bright)+'}}'
     resp = requests.put(url, headers=headers, data=data)
 
     print(resp.status_code, resp.content)
@@ -47,17 +45,16 @@ def control():
 
 @route('/bright')
 def bright():
-    bright = request.params.get('rangeval')
+    bright = request.params.get('bright')
     print (bright)
     url = "https://developer-api.govee.com/v1/devices/control"
 
     headers = CaseInsensitiveDict()
-    #headers["Govee-API-Key"] = "c64dcd4a-0a5b-4153-8798-177e606f34e2"
     headers["Govee-API-Key"] = datajson['configuration']['govee_api']
-    #headers["Request Method"] = "PUT"
     headers["Content-Type"] = "application/json"
-
-    data = '{"device":"df:db:7c:a6:b0:11:47:ab","model":"H6003","cmd":{"name":"turn","value":"on","name":"brightness","value":'+str(bright)+'}}'
+    mac=datajson['configuratio']['govee_bulb_mac']
+    
+    data = '{"device":"' +mac+'","model":"H6003","cmd":{"name":"turn","value":"on","name":"brightness","value":'+str(bright)+'}}'
     resp = requests.put(url, headers=headers, data=data)
 
     print(resp.status_code, resp.content)
