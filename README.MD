@@ -17,23 +17,7 @@ You can edit the youtube.json directly
         "Win32": "c:\\",
         "Linux": "/home/$USER/Música",
         "bitrate": "192"
-    },
-    "mp3": {
-        "format": "bestaudio/best",
-        "noplaylist": "True",
-        "continue_dl": "True",
-        "key": "FFmpegExtractAudio",
-        "preferredcodec": "mp3",
-        "preferredquality": "192"
-    },
-    "mp4": {
-        "format": "bestvideo+bestaudio/best",
-        "noplaylist": "True",
-        "continue_dl": "True",
-        "key": "FFmpegExtractAudio",
-        "preferredcodec": "mp4",
-        "preferredquality": "192"
-    }
+    
 }
 ```
 ## Features
