@@ -64,10 +64,15 @@
           <table class="table table-bordered">
             <tbody>
               <tr>
-              <th><a class="btn btn-primary btn-lg btn-block" href="/control?option=on&bright=50">On 50%</a></br></th>
-              <th><a class="btn btn-primary btn-lg btn-block" href="/control?option=on&bright=100">On 100%</a></br></th>
-              <th><a class="btn btn-danger btn-lg btn-block" href="/control?option=off&bright=0">Off</a></th>
+              <th><a class="btn btn-primary btn-lg btn-block" href="/control?option=status&bright=50">On 50%</a></br></th>
+              <th><a class="btn btn-primary btn-lg btn-block" href="/control?option=status&bright=100">On 100%</a></br></th>
+              <th><a class="btn btn-danger btn-lg btn-block" href="/control?option=status&bright=0">Off</a></th>
               </tr>
+              <tr>
+                <th><a class="btn btn-danger btn-lg btn-block" href="/control?option=color&r=255&g=0&b=0">red</a></br></th>
+                <th><a class="btn btn-success btn-lg btn-block" href="/control?option=color&r=0&g=255&b=0">green</a></br></th>
+                <th><a class="btn btn-primary btn-lg btn-block" href="/control?option=color&&r=0&g=0&b=255">blue</a></th>
+                </tr>
           </tbody>
           </table>
 
@@ -83,7 +88,7 @@
           <label for="bright">Example Range input</label>
           <input type="range" class="form-control-range" min="0" max="100" id="bright" onInput="$('#bright').html($(this).val())">
           <span id="bright" valuen="bright">50<!-- Default value --></span>
-          <a class="btn btn-primary btn-lg btn-block" href="/control?option=on&bright="&bright type="submit">Brightness</a></br>
+          <a class="btn btn-primary btn-lg btn-block" href="/bright" type="submit">Brightness</a></br>
         </div>
       </form>
 

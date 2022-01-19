@@ -1,0 +1,8 @@
+{
+    "device": "34:20:03:15:82:ae",
+    "model": "H6089",
+    "cmd": {
+        "name": "brightness",
+        "value": 50
+        }
+    }
